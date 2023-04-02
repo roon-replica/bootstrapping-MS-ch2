@@ -6,9 +6,14 @@ const app = express();
 //
 // Throws an error if the PORT environment variable is missing.
 //
-if (!process.env.PORT) {
-    throw new Error("Please specify the port number for the HTTP server with the environment variable PORT.");
-}
+// if (!process.env.PORT) {
+//     console.log(process.env);
+
+//     throw new Error("Please specify the port number for the HTTP server with the environment variable PORT.");
+// }else{
+//     console.log("Port: " + process.env.PORT);
+// }
+process.env.PORT=3000;
 
 //
 // Extracts the PORT environment variable.
@@ -24,7 +29,7 @@ app.get("/video", (req, res) => {
     // Original video from here:
     // https://sample-videos.com
     //
-    const path = "../videos/SampleVideo_1280x720_1mb.mp4";
+    const path = process.cwd().toString() +"/videos/SampleVideo_1280x720_1mb.mp4";
     fs.stat(path, (err, stats) => {
         if (err) {
             console.error("An error occurred ");
