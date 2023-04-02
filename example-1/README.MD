@@ -6,7 +6,7 @@ You need Node.js installed to run this.
 
 Before running install dependencies:
 
-    npm install
+    cd example-1 && npm install
 
 To start the microservice:
 
@@ -15,5 +15,9 @@ To start the microservice:
 Or 
 
     npm start
+
+Or 
+
+    use vscode's plugin
 
 Then point your browser at http://localhost:3000
